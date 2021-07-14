@@ -52,12 +52,12 @@ questionContainer.addEventListener("mouseenter", () => {
 });
 
 questionContainer.addEventListener("mouseout", () => {
-  questionContainer.style.background = "#2d1aff"
+  questionContainer.style.background = "#2d1aff";
 });
 
 response.addEventListener("mouseover", () => {
-  response.style.transform = "rotate(2deg)"
-})
+  response.style.transform = "rotate(2deg)";
+});
 
 //---------------------------------------------------------------
 
