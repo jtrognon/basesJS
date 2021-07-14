@@ -45,8 +45,12 @@ window.addEventListener("mousedown", () => {
 window.addEventListener("mouseup", () => {
   mouseMove.style.transform = "scale(1) translate(-50%, -50%)";
   mouseMove.style.border = "2px solid teal";
-})
+});
 
 questionContainer.addEventListener("mouseenter", () => {
-  
-})
+  questionContainer.style.background = "rgba(0, 0, 0, 0.6)"
+});
+
+questionContainer.addEventListener("mouseout", () => {
+  questionContainer.style.background = "#2d1aff"
+});
