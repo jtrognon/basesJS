@@ -30,3 +30,10 @@ btn2.addEventListener("click", () => {
 //---------------------------------------------------------------
 
 //Mouse Events
+
+const mouseMove = document.querySelector(".mousemove")
+
+window.addEventListener("mousemove", (e) => {
+  mouseMove.style.left = e.pageX+"px";
+  mouseMove.style.top = e.pageY+"px";
+});
