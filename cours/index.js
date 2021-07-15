@@ -10,8 +10,7 @@ baliseHTML.style.background = "yellow";
 const questionContainer = document.querySelector(".click-event");
 const btn1 = document.querySelector("#btn-1");
 const btn2 = document.getElementById("btn-2");
-const response = document.querySelector('p');
-
+const response = document.querySelector("p");
 
 questionContainer.addEventListener("click", () => {
   questionContainer.classList.toggle("question-clicked");
@@ -31,11 +30,11 @@ btn2.addEventListener("click", () => {
 
 //Mouse Events
 
-const mouseMove = document.querySelector(".mousemove")
+const mouseMove = document.querySelector(".mousemove");
 
 window.addEventListener("mousemove", (e) => {
-  mouseMove.style.left = e.pageX+"px";
-  mouseMove.style.top = e.pageY+"px";
+  mouseMove.style.left = e.pageX + "px";
+  mouseMove.style.top = e.pageY + "px";
 });
 
 window.addEventListener("mousedown", () => {
@@ -48,7 +47,7 @@ window.addEventListener("mouseup", () => {
 });
 
 questionContainer.addEventListener("mouseenter", () => {
-  questionContainer.style.background = "rgba(0, 0, 0, 0.6)"
+  questionContainer.style.background = "rgba(0, 0, 0, 0.6)";
 });
 
 questionContainer.addEventListener("mouseout", () => {
@@ -68,27 +67,25 @@ const key = document.getElementById("key");
 const ring = () => {
   const audio = new Audio();
   audio.src = "./Enter.mp3";
-  audio.volume = 0.1;
+  audio.volume = 0.05;
   audio.play();
-}
+};
 
 document.addEventListener("keypress", (e) => {
-  key.textContent = e.key;  
+  key.textContent = e.key;
 
-  if (e.key === "Enter"){
+  if (e.key === "Enter") {
     keypressContainer.style.background = "#2d1aff";
     keypressContainer.style.color = "white";
-  }
-  else if (e.key === "t"){
+  } else if (e.key === "t") {
     keypressContainer.style.background = "#1a1a1a";
     keypressContainer.style.color = "teal";
-  }
-  else{
-    keypressContainer.style.background = "pink";
+  } else {
+    keypressContainer.style.background = "green";
     keypressContainer.style.color = "white";
   }
 
-  ring();
+  //ring();
 });
 
 //--------------------------------------------------------------
@@ -97,12 +94,40 @@ document.addEventListener("keypress", (e) => {
 const nav = document.querySelector("nav");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 120){
+  if (window.scrollY > 120) {
     nav.style.top = 0;
-  }
-  else {
+  } else {
     nav.style.top = "-50px";
   }
-})
+});
 
 //--------------------------------------------------------------
+// Form events
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+let pseudo = "";
+let language = "";
+
+inputName.addEventListener("input", (e) => {
+  pseudo = e.target.value;
+});
+
+select.addEventListener("input", (e) => {
+  language = e.target.value;
+});
+
+form;
+addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (cgv.checked) {
+    document.querySelector("form > div").innerHTML = `
+    
+    <h3>Pseudo : ${pseudo}</h3>
+    <h4>Langage préféré : ${language}</h4>
+    `;
+  } else {
+    alert("veuillez accepter les CGV");
+  }
+});
