@@ -60,5 +60,11 @@ response.addEventListener("mouseover", () => {
 });
 
 //---------------------------------------------------------------
+//key press event
 
-//key press
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+document.addEventListener("keypress", (e) => {
+  key.textContent = e.key;
+});
