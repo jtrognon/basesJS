@@ -103,6 +103,7 @@ window.addEventListener("scroll", () => {
 
 //--------------------------------------------------------------
 // Form events
+
 const inputName = document.querySelector('input[type="text"]');
 const select = document.querySelector("select");
 const form = document.querySelector("form");
@@ -130,4 +131,21 @@ addEventListener("submit", (e) => {
   } else {
     alert("veuillez accepter les CGV");
   }
+});
+
+//--------------------------------------------------------------
+//Load event
+
+window.addEventListener("load", () => {
+  console.log("Document chargé !");
+});
+
+//--------------------------------------------------------------
+// ForEach
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    e.target.style.transform = "scale(0.7)";
+  });
 });
