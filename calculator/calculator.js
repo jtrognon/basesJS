@@ -1,33 +1,16 @@
-let total = 0;
+const buttons = document.querySelectorAll(".btn");
+const result = document.getElementById("result");
 
-function add(x) {
-  total += x;
-  return total;
-}
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    result.textContent += e.target.id;
+  });
+});
 
-function substract(x) {
-  total -= x;
-  return total;
-}
+equal.addEventListener("click", () => {
+  result.textContent = eval(result.textContent);
+});
 
-function multiply(x) {
-  if (total !== 0) {
-    total *= x;
-    return total;
-  } else {
-    return (total = x);
-  }
-}
-
-function divide(x) {
-  if (total !== 0) {
-    total /= x;
-    return total;
-  } else {
-    return (total = x);
-  }
-}
-
-function reset() {
-  total = 0;
-}
+clear.addEventListener("click", () => {
+  result.textContent = "";
+});
