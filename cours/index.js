@@ -149,6 +149,7 @@ boxes.forEach((box) => {
     e.target.style.transform = "scale(0.7)";
   });
 });
+
 //--------------------------------------------------------------
 //AddEventListener vs onclick
 
@@ -177,3 +178,15 @@ window.addEventListener(
   },
   true
 );
+
+//--------------------------------------------------------------
+//Stop propagation
+
+questionContainer.addEventListener("click", (e) => {
+  alert("test");
+  e.stopPropagation();
+});
+
+//removeEventListener
+
+//--------------------------------------------------------------
