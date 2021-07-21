@@ -27,7 +27,6 @@ btn2.addEventListener("click", () => {
 });
 
 //---------------------------------------------------------------
-
 //Mouse Events
 
 const mouseMove = document.querySelector(".mousemove");
@@ -182,11 +181,90 @@ window.addEventListener(
 //--------------------------------------------------------------
 //Stop propagation
 
-questionContainer.addEventListener("click", (e) => {
-  alert("test");
-  e.stopPropagation();
-});
+// questionContainer.addEventListener("click", (e) => {
+//   alert("test");
+//   e.stopPropagation();
+// });
 
 //removeEventListener
+
+//--------------------------------------------------------------
+//BOM
+
+// console.log(window.innerHeight);
+// console.log(window.scrollY);
+
+//window.open("http://google.com", "cours js", "height=600", "width=800");
+//window.close()
+
+//Evénements adossés à Window
+// alert("alert")
+
+//Confirm
+btn2.addEventListener("click", () => {
+  confirm("Voulez vous vraiment cliquer ?");
+});
+
+//prompt
+btn1.addEventListener("click", () => {
+  let answer = prompt("Entrez votre nom!");
+  questionContainer.innerHTML += "<h3>Bravo " + answer + "</h3>";
+});
+
+setTimeout(() => {
+  questionContainer.style.borderRadius = "300px";
+}, 2000); //en millisecondes
+
+// let interval = setInterval(() => {
+//   document.body.innerHTML += `
+//     <div class='box'>
+//       <h2>Nouvelle boîte !</h2>
+//     </div>
+//   `;
+// }, 1000);
+
+// window.addEventListener("click", (e) => {
+//   clearInterval(interval);
+// });
+
+//Location
+// console.log(location.href);
+// console.log(location.host);
+// console.log(location.pathname);
+// console.log(location.search);
+// location.replace("https://google.com");
+
+// window.onload = () => {
+//   location.href = "https://twitter.fr";
+// };
+
+//Navigator
+// console.log(navigator.userAgent);
+
+// var options = {
+//   enableHighAccuracy: true,
+//   timeout: 5000,
+//   maximumAge: 0,
+// };
+
+// function success(pos) {
+//   var crd = pos.coords;
+
+//   console.log("Votre position actuelle est :");
+//   console.log(`Latitude : ${crd.latitude}`);
+//   console.log(`Longitude : ${crd.longitude}`);
+//   console.log(`La précision est de ${crd.accuracy} mètres.`);
+// }
+
+// function error(err) {
+//   console.warn(`ERREUR (${err.code}): ${err.message}`);
+// }
+
+// navigator.geolocation.getCurrentPosition(success, error, options);
+
+//History
+// console.log(history);
+// history.back();
+// history.go(-1);
 
 //--------------------------------------------------------------
