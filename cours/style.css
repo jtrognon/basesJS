@@ -71,7 +71,11 @@ nav::after {
   content: "";
   height: 150px;
   width: 150px;
-  background: radial-gradient(circle closest-side, white, transparent);
+  background: radial-gradient(
+    circle closest-side,
+    rgba(255, 255, 255, 0.747),
+    transparent
+  );
   position: absolute;
   transform: translate(-50%, -50%);
   transition: 0.25s;
