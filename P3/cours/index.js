@@ -126,10 +126,20 @@ let string2 = "Javascript est un langage orienté objet";
 // Méthodes pour les numbers
 //--------------------------
 
-let number2 = 42.1234;
-let numberString = "42.12 est un chiffre";
+// let number2 = 42.1234;
+// let numberString = "42.12 est un chiffre";
 
-console.log(number2.toFixed(2));
-console.log(parseInt("43"));
-console.log(parseInt(numberString));
-console.log(parseFloat(numberString));
+// console.log(number2.toFixed(2));
+// console.log(parseInt("43"));
+// console.log(parseInt(numberString));
+// console.log(parseFloat(numberString));
+
+//Math
+// console.log(Math.PI);
+// console.log(Math.round(4.4));
+// console.log(Math.floor(4.9));
+// console.log(Math.ceil(4.1));
+// console.log(Math.pow(2, 7));
+// console.log(Math.sqrt(16));
+
+console.log(Math.floor(Math.random() * 50));
