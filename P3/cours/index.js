@@ -71,13 +71,13 @@ if (data[0].age > data[1].age) {
 
 //Les boucles for
 // for (const user of data) {
-//   document.body.innerHTML += `<li>${user.pseudo} - ${user.age}ans<\li>`;
+//   document.body.innerHTML += `<li>${user.pseudo} - ${user.age}ans</li>`;
 // }
 
-for (i = 0; i < data.length; i++) {
-  user = data[i];
-  document.body.innerHTML += `<h2>${user.pseudo} - ${user.age}ans<\h2>`;
-}
+// for (i = 0; i < data.length; i++) {
+//   user = data[i];
+//   document.body.innerHTML += `<h2>${user.pseudo} - ${user.age}ans</h2>`;
+// }
 
 //Switch
 document.body.addEventListener("click", (e) => {
@@ -197,3 +197,22 @@ arrayNumber.push(17);
 // document.body.innerHTML += arrayNumber
 //   .map((number) => `<li>${number}<\li>`)
 //   .join("");
+
+//----------------
+//Méthodes Objects
+//----------------
+
+document.body.innerHTML = data
+  .filter((user) => user.pseudo.includes("i"))
+  .sort((a, b) => b.age - a.age)
+  .map(
+    (user) =>
+      `
+  <div class="user-card">
+    <h2>${user.pseudo}</h2>
+    <p>Age : ${user.age}</p>
+    <p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+  </div>
+  `
+  )
+  .join("");
