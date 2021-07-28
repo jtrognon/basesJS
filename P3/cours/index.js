@@ -142,4 +142,58 @@ let string2 = "Javascript est un langage orienté objet";
 // console.log(Math.pow(2, 7));
 // console.log(Math.sqrt(16));
 
-console.log(Math.floor(Math.random() * 50));
+// console.log(Math.floor(Math.random() * 50));
+
+//---------------
+//Méthodes Arrays
+//---------------
+
+let array3 = ["Javascript", "Python", "Java"];
+let array4 = ["PHP", "Ruby"];
+
+// let newArray = array3.concat(array4);
+// console.log(newArray);
+
+// let newArray = [...array3, ...array4];
+// console.log(newArray);
+
+// console.log(array3.join(" "));
+
+// console.log(newArray.slice(2, 5));
+
+// console.log(array3.indexOf("Python"));
+
+// array3.forEach((languages) => console.log(languages));
+
+// console.log(array3.every((language) => language === "Java"));
+// console.log(array3.some((language) => language === "Java"));
+
+// let shift = array3.shift();
+// console.log(shift);
+// console.log(array3);
+
+// console.log(array3.pop());
+
+// const restArray = array3.splice(0, 2, ...array4);
+// console.log(restArray);
+// console.log(array3);
+
+//----------
+// IMPORTANT
+//----------
+
+let arrayNumber = [4, 74, 28, 12, 1];
+// console.log(arrayNumber.reduce((x, y) => x + y));
+arrayNumber.push(17);
+// console.log(arrayNumber);
+
+//FILTER, SORT, MAP
+
+// console.log(arrayNumber.filter((number) => number > 10));
+// console.log(arrayNumber.sort());
+// console.log(arrayNumber.sort((a, b) => a - b));
+// console.log(arrayNumber.filter((number) => number > 10).sort((a, b) => a - b));
+
+// document.body.innerHTML += arrayNumber
+//   .map((number) => `<li>${number}<\li>`)
+//   .join("");
