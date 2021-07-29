@@ -226,7 +226,7 @@ let date = new Date();
 
 //Timestamp
 let timestamp = Date.parse(date);
-console.log(timestamp);
+// console.log(timestamp);
 
 //IsoString
 iso = date.toISOString();
@@ -247,3 +247,28 @@ function dateParser(chaine) {
 // console.log(dateParser(iso));
 
 //https://youtu.be/ySIZ4Xt7dJM
+
+//-------------
+//Destructuring
+//-------------
+
+let moreData = {
+  destVar: ["Element 1", "Element 2"],
+};
+
+const { destVar } = moreData;
+
+// console.log(moreData.destVar);
+// console.log(destVar);
+
+let array5 = [70, 80, 90];
+let [x, y, z] = array5;
+// console.log(x, y, z);
+
+const dateDestructuring = (chaine) => {
+  let newDate = chaine.split("T")[0];
+  let [y, m, d] = newDate.split("-");
+  return [d, m, y].join("/");
+};
+
+// console.log(dateDestructuring(iso));
