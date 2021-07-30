@@ -306,4 +306,4 @@ let mail = "from_scratch33@gmail.com";
 
 let separator = 26568254;
 
-console.log(separator.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+// console.log(separator.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
