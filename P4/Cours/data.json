@@ -1,0 +1,11 @@
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.fontFamily": "Cascadia Mono PL, 'CourierNew', monospace",
+  "editor.tabSize": 2,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontWeight": "400",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true
+}
