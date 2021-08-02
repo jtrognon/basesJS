@@ -46,3 +46,51 @@ const init = {
 //----------------------------------------------------------
 
 //CRUD => Create (POST), read (GET), update (PUT), delete (DELETE)
+
+// const init2 = {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify({
+//     pseudo: "From Scratch",
+//     message: "Comment ça va ?",
+//   }),
+//   mode: "cors",
+//   credentials: "same-origin",
+// };
+
+const init2 = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    pseudo: "From Scratch",
+    age: 25,
+  }),
+  mode: "cors",
+  credentials: "same-origin",
+};
+
+const init3 = {
+  method: "DELETE",
+  header: {
+    "Content-type": "application/json",
+  },
+  mode: "cors",
+  credentials: "same-origin",
+};
+
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  // fetch("http://localhost:3000/posts", init2).then(() =>
+  //   console.log("data envoyée")
+  // );
+  fetch("http://localhost:3000/posts", init2).then(() =>
+    console.log("data envoyée")
+  );
+  // fetch("http://localhost:3000/posts/3", init3).then(() =>
+  //   console.log("data supprimée")
+  // );
+});

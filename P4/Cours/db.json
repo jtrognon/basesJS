@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "pseudo": "From Scratch",
+      "message": "salut",
+      "id": 1
+    },
+    {
+      "pseudo": "From Scratch",
+      "message": "Comment ça va ?",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "pseudo": "From Scratch",
+      "age": 25,
+      "id": 1
+    }
+  ]
+}
