@@ -140,8 +140,6 @@ fetch("data.json")
 //-------
 //Web API
 //-------
-
-//--------------
 //Client Storage
 //--------------
 
@@ -169,3 +167,14 @@ localStorage.user = JSON.stringify(obj);
 sessionStorage.dataSettings = "55px";
 // console.log(sessionStorage.dataSettings);
 sessionStorage.clear();
+
+//--------
+// Cookies
+//--------
+
+document.cookie = "username=FromScratch";
+
+//Bonne pratique
+document.cookie = "pseudo=FS;path=/;max-age=450000; secure=samesite";
+document.cookie =
+  "pseudo2=FS;path=/;expires=Sun, 08 Aug 2021 17:36:03 GMT; secure=samesite";
