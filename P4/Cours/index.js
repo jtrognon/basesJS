@@ -121,3 +121,18 @@ const fetchData2 = async () => {
 
   await executeFonction();
 };
+
+//-------
+//Le JSON
+//-------
+
+//Méthode .json() => méthode qui s'auto-résout en renvoyant le Body de la requête
+
+fetch("data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    // Stringify => convertit en JSON
+    let settings = JSON.stringify(data);
+    // Parse => transforme en objet js
+    // console.log(JSON.parse(settings));
+  });
