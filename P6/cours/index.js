@@ -1,3 +1,5 @@
+// "use strict";
+
 //Canvas
 //------
 
@@ -54,16 +56,24 @@ function isValidJSON(txt) {
 //throw
 //-----
 
-function isNumber(num) {
-  if (isNaN(num)) {
-    throw "Not a number !";
-  } else {
-    console.log("C'est un nombre");
-  }
-}
+// function isNumber(num) {
+//   if (isNaN(num)) {
+//     throw "Not a number !";
+//   } else {
+//     console.log("C'est un nombre");
+//   }
+// }
 
-try {
-  isNumber("a");
-} catch (error) {
-  console.log(error);
-}
+// try {
+//   isNumber("a");
+// } catch (error) {
+//   console.log(error);
+// }
+
+//-----------
+//Strict mode
+//-----------
+
+voiture = "Toyota";
+
+console.log(voiture);
