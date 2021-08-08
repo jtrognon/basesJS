@@ -74,6 +74,8 @@ function isValidJSON(txt) {
 //Strict mode
 //-----------
 
-voiture = "Toyota";
+// voiture = "Toyota";
 
-console.log(voiture);
+// console.log(voiture);
+
+//https://www.youtube.com/watch?v=R453LmdH9LY
